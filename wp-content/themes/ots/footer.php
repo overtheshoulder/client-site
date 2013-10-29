@@ -6,8 +6,26 @@
 			<div class="col col-1">
                 <h4>Job Postings</h4>
                 <ul>
-                    <li><a href="">Mobile Research Specialist</a></li>
-                    <li><a href="">Tablet Research Manager</a></li>
+                <?php
+                
+                	    $args = array(
+                			'post_type' => 'job'
+                		);
+                		$jobs = new WP_Query( $args );
+                		if( $jobs->have_posts() ) {
+                			while( $jobs->have_posts() ) {
+                				$jobs->the_post();
+                				$permalink = get_permalink( $id );
+                				?>
+                					<li><a href="<?php echo $permalink; ?>"><?php the_title() ?></a></li>
+                				<?php
+                			}
+                		}
+                		else {
+                			echo '<li>'.'There are no job openings at this time.'.'</li>';
+                		}
+                
+                ?> 
                 </ul>
             </div>
 			<div class="col col-2">
