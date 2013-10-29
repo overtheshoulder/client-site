@@ -95,7 +95,6 @@ body {
 	border-radius: 10px / 100px;
 }
 
-
 .left {
     float: left;
 }
@@ -271,6 +270,23 @@ button, input[type="submit"] {
 	line-height: 22px;
 }
 
+.sidebar-right .widget {
+    margin-bottom: 2em;
+}
+
+.sidebar-right .widget-title {
+    margin-bottom: 0.632em;
+}
+
+.sidebar-right .widget p,
+.sidebar-right .widget li {
+	font-size: 13px;
+	line-height: 22px;
+}
+
+.sidebar-right .widget p {
+	margin-bottom: 12px;
+}
 
 
 /**========================================================
