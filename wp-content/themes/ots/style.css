@@ -50,16 +50,24 @@ body {
 	padding-left: 1.5%;
 }
 
+.single-job .content {
+    float: left;
+    padding: 1em 1.5% 0 0;
+}
+
 .sidebar {
 	position: relative;
 	width: 31.2337%;
 	padding-top: 1em;
     padding-bottom: 1.5em;
-	padding-right: 3%;
 	background: #fff;
 }
 
-.sidebar:before {
+.sidebar-left {
+	padding-right: 3%;
+}
+
+.sidebar-left:before {
 	content: "";
 	position: absolute;
 	right: 0;
@@ -70,6 +78,23 @@ body {
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	border-radius: 10px / 100px;
 }
+
+.sidebar-right {
+	padding-left: 3%;
+}
+
+.sidebar-right:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	width: 1em;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	border-radius: 10px / 100px;
+}
+
 
 .left {
     float: left;
@@ -90,13 +115,13 @@ h1,h2,h3,h4,h5 {
 }
 
 h1 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 1.75em; /* 28 */
+    line-height: 1.143em; /* 32 */
 	font-weight: 900;
 }
 
 h2 {
-	font-size: 2.25em;
+	font-size: 1.5em;
 	font-weight: 900;
 }
 
@@ -106,18 +131,31 @@ h3 {
 }
 
 h4 {
+    font-size: 1em;
+	font-weight: 700;
 }
 
 /** Content Type **/
 
-.entry p {
+.entry p,
+.entry ul {
 	margin-bottom: 1em;
 	font-size: 0.938em;
 	line-height: 1.6em;
 }
 
+.entry ul {
+    padding-left: 1.2em;
+    list-style: disc;
+}
+
 .page h1 {
+    margin-bottom: 6px;
     color: #e12526;
+}
+
+.post-title {
+    margin-bottom: 0.536em;
 }
 
 
@@ -214,32 +252,23 @@ button, input[type="submit"] {
     SIDEBAR
 ========================================================**/
 
-.sidebar h2 {
+.sidebar-left h2 {
     margin-bottom: 16px;
     font-size: 18px;
     line-height: 26px;
 }
 
-.mission {
-    margin-bottom: 3em;
-}
-
-.sidebar .widget-title {
+.sidebar-left .widget-title {
     margin-bottom: 16px;
     font-size: 18px;
     line-height: 26px;
     font-weight: 900;
 }
 
-.sidebar p {
+.sidebar-left p {
 	margin-bottom: 16px;
 	font-size: 13px;
 	line-height: 22px;
-}
-
-.jobs h3 {
-    margin-bottom: 12px;
-    font-size: 18px;
 }
 
 
@@ -254,15 +283,6 @@ button, input[type="submit"] {
 
 .top img {
     width: 100%;
-}
-
-.content h1 {
-    margin-bottom: 6px;
-}
-
-.content p {
-    font-size: 15px;
-    line-height: 24px;
 }
 
 .home .content .post {

@@ -112,8 +112,17 @@
 	if ( function_exists('register_sidebar' )) {
 		function ots_widgets_init() {
 			register_sidebar( array(
-				'name'          => __( 'Sidebar Widgets', 'ots' ),
+				'name'          => __( 'Left Sidebar', 'ots' ),
 				'id'            => 'sidebar-primary',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			) );
+
+			register_sidebar( array(
+				'name'          => __( 'Jobs Sidebar', 'ots' ),
+				'id'            => 'sidebar-jobs',
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',

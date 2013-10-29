@@ -4,7 +4,7 @@
 
 		<section class="content">
 			
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="post-title"><?php the_title(); ?></h1>
 
 			<div class="entry">
 				
@@ -22,6 +22,10 @@
 
 <?php post_navigation(); ?>
 	
-<?php get_sidebar(); ?>
+<?php if ( is_active_sidebar( 'sidebar-jobs' ) ) : ?>
+    <aside id="sidebar-right" class="sidebar sidebar-right right">
+	<?php dynamic_sidebar( 'sidebar-jobs' ); ?>
+    </aside>
+<?php endif; ?>
 
 <?php get_footer(); ?>
