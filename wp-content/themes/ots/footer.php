@@ -4,7 +4,7 @@
 	<footer class="footer cf">
 		<div class="wrapper cf">
 			<div class="col col-1">
-                <h4>Job Postings</h4>
+                <h4><a href="/jobs/">Job Postings</a></h4>
                 <ul>
                 <?php
                 
@@ -29,7 +29,7 @@
                 </ul>
             </div>
 			<div class="col col-2">
-			    <h4>From Our Blog</h4>
+                <h4><a href="/blog/">From Our Blog</a></h4>
 			    <ul>
 			        <li><a href="">Lorem ipsum dolor sit amet, conetur adisicing elit</a></li>
 			    </ul>

@@ -153,7 +153,8 @@ h4 {
     color: #e12526;
 }
 
-.post-title {
+.post-title, .page .page-title {
+	color: #595959;
     margin-bottom: 0.536em;
 }
 
@@ -311,6 +312,26 @@ button, input[type="submit"] {
 
 
 /**========================================================
+    JOBS
+========================================================**/
+
+.job-item {
+    margin-bottom: 0.75em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.job-item h3 {
+    float: left;
+}
+
+.job-item .view-link {
+    float: right;
+    font-size: 0.938em;
+}
+
+
+/**========================================================
     FOOTER
 ========================================================**/
 
@@ -365,6 +386,14 @@ button, input[type="submit"] {
     font-size: 15px;
     line-height: 24px;
     font-weight: 700;
+}
+
+.footer h4 a {
+	color: #595959;
+}
+
+.footer h4 a:hover {
+    color: #e12526;
 }
 
 /*
