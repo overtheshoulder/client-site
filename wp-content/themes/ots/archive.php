@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
-<div class="top">
+<div class="top cf">
     <h2 class="page-title">The OTS Blog</h2>
+    <a href="/blog/" class="view-all">View all Articles ></a>
 </div>
 
 <section class="content">
@@ -34,18 +35,19 @@
 			<?php } ?>
 
 			<?php post_navigation(); ?>
-
+            
+            <div class="post-list cf">
 			<?php while (have_posts()) : the_post(); ?>
 			
-				<article <?php post_class() ?>>
-				
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					
-						<?php // posted_on(); ?>
-
-				</article>
+        		<article class="post cf">
+        
+                    <div class="date"><?php the_date('M j, Y'); ?></div>
+        			<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+        
+        		</article>
 
 			<?php endwhile; ?>
+            </div>
 
 			<?php post_navigation(); ?>
 			
@@ -59,9 +61,9 @@
 
 <?php if ( is_active_sidebar( 'sidebar-blog' ) ) : ?>
 
-    <aside id="sidebar-right" class="sidebar sidebar-right right">
-	    <?php dynamic_sidebar( 'sidebar-blog' ); ?>
-    </aside>
+<aside id="sidebar-right" class="sidebar sidebar-right right">
+    <?php dynamic_sidebar( 'sidebar-blog' ); ?>
+</aside>
 
 <?php endif; ?>
 

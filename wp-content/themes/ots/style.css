@@ -6,13 +6,10 @@ Author URI: http://bradsawicki.com
 Version: 1.0
 */
 @import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900);
-html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; } html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } ol, ul { list-style: none; } button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; } button, input { line-height: normal; } input { -webkit-appearance: none; border-radius: 0; } button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer;  *overflow: visible; } button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; } .cf:before, .cf:after { content: " "; display: table; } .cf:after {clear: both;} .cf { *zoom: 1; } * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } img { max-width: 100%; height: auto; vertical-align: middle; } * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-iframe, video { width: 100%; height: auto !important; }
+html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; } html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } ol, ul { list-style: none; } button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; } button, input { line-height: normal; } input { -webkit-appearance: none; border-radius: 0; } button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer;  *overflow: visible; } button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; } .cf:before, .cf:after { content: " "; display: table; } .cf:after {clear: both;} .cf { *zoom: 1; } * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } img { max-width: 100%; height: auto; vertical-align: middle; } * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } iframe, video { width: 100%; }
 
 /*
 red: #E12526
-
 */
 
 body {
@@ -52,6 +49,7 @@ body {
 
 .single-job .content,
 .single-post .content,
+.blog .content,
 .archive .content {
     float: left;
     padding: 1em 1.5% 0 0;
@@ -82,6 +80,7 @@ body {
 }
 
 .sidebar-right {
+    padding-top: 1.5em;
 	padding-left: 3%;
 }
 
@@ -167,21 +166,28 @@ h4 {
     margin-bottom: 1.5em;
 }
 
+.top .page-title {
+    color: #595959;
+}
+
 blockquote {
-    margin-bottom: 0.5em;
-    padding: 0.5em;
+    float: right;
+    max-width: 20em;
+    margin: 0px 0px 1.5em 1.5em;
+    padding: 1em 4%;
     background: #F5F5F5;
-    font-size: 2em;
-    line-height: 1.25em;
-    font-style: italic;
 }
 
 .entry blockquote p {
     margin-bottom: 0;
+    font-size: 1.6em;
+    line-height: 1.231em;
+    font-style: italic;
 }
 
-.entry .date {
+.date {
     color: #888;
+    font-size: 0.813em;
 }
 
 
@@ -367,6 +373,7 @@ button, input[type="submit"] {
     BLOG
 ========================================================**/
 
+.blog .top,
 .single-post .top,
 .archive .top {
     padding-bottom: 1.5em;
@@ -374,7 +381,34 @@ button, input[type="submit"] {
     border-bottom: 1px solid #e3e3e3;
 }
 
+.single-post .top .page-title,
+.archive .top .page-title {
+    float: left;
+}
 
+.single-post .top .view-all,
+.archive .top .view-all {
+    float: right;
+    font-size: 0.813em;
+}
+
+.post-list .post {
+    position: relative;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.post-list .title {
+    width: 100%;
+    padding-right: 5em;
+}
+
+.post-list .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 
 /**========================================================

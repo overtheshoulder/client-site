@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
-<div class="top">
+<div class="top cf">
     <h2 class="page-title">The OTS Blog</h2>
+    <a href="/blog/" class="view-all">View all Articles ></a>
 </div>
 
 <section class="content">
@@ -13,16 +14,12 @@
 			<h1 class="post-title"><?php the_title(); ?></h1>
 
 			<div class="entry">
-			    <p class="date"><?php the_date('F j, Y'); ?></p>
+			    <p class="date"><?php the_date('M j, Y'); ?></p>
 				
 				<?php the_content(); ?>
 
 				<?php wp_link_pages(array('before' => __('Pages: '), 'next_or_number' => 'number')); ?>
 				
-				<?php // the_tags( __('Tags: '), ', ', ''); ?>
-			
-				<?php // posted_on(); ?>
-
 			</div>
 			
 			<?php edit_post_link(__('Edit this entry'),'','.'); ?>
