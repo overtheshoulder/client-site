@@ -1,29 +1,35 @@
 <?php get_header(); ?>
 
+<div class="top">
+    <h2 class="page-title">The OTS Blog</h2>
+</div>
+
+<section class="content">
+
 		<?php if (have_posts()) : ?>
 
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
 			<?php /* If this is a category archive */ if (is_category()) { ?>
-				<h2><?php _e('Archive for the','html5reset'); ?> &#8216;<?php single_cat_title(); ?>&#8217; <?php _e('Category','html5reset'); ?></h2>
+				<h3 class="archive-title"> <?php _e('Category:','html5reset'); ?> <?php single_cat_title(); ?>  </h3>
 
 			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-				<h2><?php _e('Posts Tagged','html5reset'); ?> &#8216;<?php single_tag_title(); ?>&#8217;</h2>
+				<h3 class="archive-title"><?php _e('Posts Tagged','html5reset'); ?> &#8216;<?php single_tag_title(); ?>&#8217;</h3>
 
 			<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-				<h2><?php _e('Archive for','html5reset'); ?> <?php the_time('F jS, Y'); ?></h2>
+				<h3 class="archive-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('F jS, Y'); ?></h3>
 
 			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-				<h2><?php _e('Archive for','html5reset'); ?> <?php the_time('F, Y'); ?></h2>
+				<h3 class="archive-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('F, Y'); ?></h3>
 
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-				<h2 class="pagetitle"><?php _e('Archive for','html5reset'); ?> <?php the_time('Y'); ?></h2>
+				<h3 class="archive-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('Y'); ?></h3>
 
 			<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-				<h2 class="pagetitle"><?php _e('Author Archive','html5reset'); ?></h2>
+				<h3 class="archive-title"><?php _e('Author Archive','html5reset'); ?></h3>
 
 			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-				<h2 class="pagetitle"><?php _e('Blog Archives','html5reset'); ?></h2>
+				<h3 class="archive-title"><?php _e('Blog Archives','html5reset'); ?></h3>
 			
 			<?php } ?>
 
@@ -33,13 +39,9 @@
 			
 				<article <?php post_class() ?>>
 				
-						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					
-						<?php posted_on(); ?>
-
-						<div class="entry">
-							<?php the_content(); ?>
-						</div>
+						<?php // posted_on(); ?>
 
 				</article>
 
@@ -53,5 +55,14 @@
 
 	<?php endif; ?>
 
-<?php get_sidebar(); ?>
+</section>
+
+<?php if ( is_active_sidebar( 'sidebar-blog' ) ) : ?>
+
+    <aside id="sidebar-right" class="sidebar sidebar-right right">
+	    <?php dynamic_sidebar( 'sidebar-blog' ); ?>
+    </aside>
+
+<?php endif; ?>
+
 <?php get_footer(); ?>

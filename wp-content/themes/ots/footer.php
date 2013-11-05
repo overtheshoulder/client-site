@@ -31,7 +31,13 @@
 			<div class="col col-2">
                 <h4><a href="/blog/">From Our Blog</a></h4>
 			    <ul>
-			        <li><a href="">Lorem ipsum dolor sit amet, conetur adisicing elit</a></li>
+			        <?php
+			        $args = array( 'numberposts' => '2' );
+                	$recent_posts = wp_get_recent_posts( $args );
+                	foreach( $recent_posts as $recent ){
+                		echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
+                	}
+                	?>
 			    </ul>
 			</div>
 			<div class="col col-3">
