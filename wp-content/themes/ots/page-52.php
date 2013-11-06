@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 
-<section class="content">
+<div class="top cf">
+    <h2 class="page-title">Jobs Openings</h2>
+    <a href="/jobs/" class="view-all">View all Jobs ></a>
+</div>
 
-    <h1 class="page-title">Jobs</h1>
+<section class="content">
     
     <div class="job-list">
     <?php
@@ -32,6 +35,6 @@
 
 </section>
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>

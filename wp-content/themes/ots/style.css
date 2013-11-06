@@ -36,6 +36,7 @@ body {
 .main {
     position: relative;
     z-index: 1;
+    min-height: 20em;
 	padding: 2em 0 2.5em;
 	background: #fff;
 	border-top: 1px solid #eaeaea;
@@ -51,7 +52,8 @@ body {
 .single-job .content,
 .single-post .content,
 .blog .content,
-.archive .content {
+.archive .content,
+.page-id-52 .content {
     float: left;
     padding: 1em 1.5% 0 0;
 }
@@ -360,6 +362,10 @@ span.wpcf7-not-valid-tip {
     margin-bottom: 2em;
 }
 
+.sidebar-right .widget:last-child {
+    margin-bottom: 0;
+}
+
 .sidebar-right .widget-title {
     margin-bottom: 0.632em;
 }
@@ -399,6 +405,25 @@ span.wpcf7-not-valid-tip {
 /**========================================================
     JOBS
 ========================================================**/
+
+.page-id-52 .top,
+.single-job .top {
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.page-id-52 .top .page-title,
+.single-job .top .page-title {
+    float: left;
+    margin-bottom: 0;
+}
+
+.page-id-52 .top .view-all,
+.single-job .top .view-all {
+    float: right;
+    font-size: 0.813em;
+}
 
 .job-item {
     margin-bottom: 0.75em;
@@ -558,7 +583,7 @@ span.wpcf7-not-valid-tip {
 
 @media all and (max-width: 940px) {
     .main { padding: 1.5em 0; }
-/*     .menu-main-menu-container { display: none; } */
+
     .main-nav { display: none; clear: both; width: 100%; padding: 0; margin-top: 1em; background: #e12526; }
     .main-nav li { width: 50%; margin: 0; border-bottom: 1px solid #f09292; }
     .main-nav li:nth-child(2n+1) { border-right: 1px solid #f09292; }
@@ -567,11 +592,15 @@ span.wpcf7-not-valid-tip {
     .main-nav a:hover, .main-nav .current-menu-item a { background: #e43a3b; }
     .btn-mobile { display: block; font-size: 1em; }
     
-    .content, .sidebar-left { float: none; width: 100%; padding: 0; }
+    .content, .sidebar-left, .sidebar-right, .single-job .content, .single-post .content, .blog .content, .archive .content { float: none; width: 100%; padding: 0; }
+    .single-job .content, .single-post .content, .blog .content, .archive .content { margin-bottom: 1.5em; padding-bottom: 0.75em; border-bottom: 1px solid #e3e3e3; }
+    .sidebar-left:before, .sidebar-right:before { display: none; }
     .sidebar-left { display: none; }
     .home .sidebar-left { display: block; margin-bottom: 1.5em; }
-    .sidebar-left .widget-title { font-size: 1.25em; margin-bottom: 0.5em; }
-    .sidebar-left p { font-size: 0.875em; }
+    .sidebar-left .widget-title, .sidebar-right .widget-title { font-size: 1.25em; margin-bottom: 0.5em; }
+    .sidebar-left p, .sidebar-right .widget p { font-size: 0.875em; }
+    
+    .sidebar-right .widget { float: left; width: 50%; margin-bottom: 0; padding-right: 5%; }
     
     .footer .col { width: 30.2%; margin-bottom: 1.5em; }
     .footer .col-3 { margin-right: 0; }
@@ -583,9 +612,10 @@ span.wpcf7-not-valid-tip {
     .wrapper { width: 92%; }
     .logo { width: 100px; }
     .btn-mobile { margin-top: 0.75em; }
-    
-    .sidebar-left:before { display: none; }
-    
+    blockquote { float: none; width: 100%; max-width: none; margin: 0 0 1em 0; }
+
+    .sidebar-right .widget { float: none; width: 100%; margin-bottom: 1.5em; padding-right: 0; }
+
     .footer { background: #f5f5f5; border-top: 1px solid #e3e3e3; }
     .footer .wrapper { border: none; }
     .footer .col { float: none; width: 100%; margin-bottom: 1em; padding-bottom: 1em; border-right: none; border-bottom: 1px solid #e3e3e3; }
