@@ -22,7 +22,8 @@ body {
 ========================================================**/
 
 .wrapper {
-	width: 96%;
+    position: relative;
+	width: 94%;
 	max-width: 1024px;
 	margin: 0 auto;
 }
@@ -305,6 +306,32 @@ span.wpcf7-not-valid-tip {
     border-bottom: 1px solid #252525;
 }
 
+.btn-mobile {
+    display: none;
+    float: right;
+    margin-top: 1.25em;
+    padding: 0.5em 0.75em;
+    background: #252525;
+    border-radius: 0.3em;
+    color: #fff;
+    font-size: 0.938em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.btn-mobile:hover {
+    color: #fff;
+}
+
+.btn-mobile .icon-cancel {
+    display: none;
+}
+
+.main-nav.show {
+    display: block;
+}
+
+
 
 /**========================================================
     SIDEBAR
@@ -431,6 +458,15 @@ span.wpcf7-not-valid-tip {
 }
 
 
+
+/**========================================================
+    CONTACT
+========================================================**/
+
+.page-id-16 .top {
+    display: none;
+}
+
 /**========================================================
     FOOTER
 ========================================================**/
@@ -451,10 +487,6 @@ span.wpcf7-not-valid-tip {
     min-height: 4.5em;
     margin-right: 3.125%;
 	border-right: 1px solid #e3e3e3;
-}
-
-.footer .col-egg {
-    width: 14.0543%;
 }
 
 .footer .col-4 img {
@@ -496,14 +528,6 @@ span.wpcf7-not-valid-tip {
     color: #e12526;
 }
 
-/*
-.footer .col-1 li {
-    float: left;
-    padding-top: 0.5em;
-    margin-right: 1em;
-}
-*/
-
 .footer .col-3 p {
     font-size: 14px;
     line-height: 20px;
@@ -518,90 +542,57 @@ span.wpcf7-not-valid-tip {
     margin-bottom: 0.25em;
 }
 
-
-/* And here begins the WordPress fun.
--------------------------------------------------------------------------------*/
-
-.post {}
-
-.entry-content {}
-.entry-content a {}
-.entry-content a:hover {}
-
-#meta {}
-.postmetadata {}
-
-#sidebar {}
-
-.navgation {}
-.next-posts {}
-.prev-posts {}
-
-#searchform {}
-#s {}
-#searchsubmt {}
-	
-ol.commentlist {list-style: none;}
-ol.commentlist li {}
-ol.commentlist li.alt {}
-ol.commentlist li.bypostauthor {}
-ol.commentlist li.byuser {}
-ol.commentlist li.comment-author-admin {}
-ol.commentlist li.comment {border-bottom: 1px dotted #666; padding: 10px;}
-ol.commentlist li.comment div.comment-author {}
-ol.commentlist li.comment div.vcard {}
-ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
-ol.commentlist li.comment div.vcard cite.fn a.url {}
-ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 0 0 10px 10px;}
-ol.commentlist li.comment div.vcard img.avatar-32 {}
-ol.commentlist li.comment div.vcard img.photo {}
-ol.commentlist li.comment div.vcard span.says {}
-ol.commentlist li.comment div.commentmetadata {}
-ol.commentlist li.comment div.comment-meta {font-size: 10px;}
-ol.commentlist li.comment div.comment-meta a {color: #ccc;}
-ol.commentlist li.comment p {}
-ol.commentlist li.comment ul {}
-ol.commentlist li.comment div.reply {font-size: 11px;}
-ol.commentlist li.comment div.reply a {font-weight: bold;}
-ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
-ol.commentlist li.comment ul.children li {}
-ol.commentlist li.comment ul.children li.alt {}
-ol.commentlist li.comment ul.children li.bypostauthor {}
-ol.commentlist li.comment ul.children li.byuser {}
-ol.commentlist li.comment ul.children li.comment {}
-ol.commentlist li.comment ul.children li.comment-author-admin {}
-ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-3 {border-left: 5px solid #999; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-5 {}
-ol.commentlist li.comment ul.children li.odd {}
-ol.commentlist li.even {background: #fff;}
-ol.commentlist li.odd {background: #f6f6f6;}
-ol.commentlist li.parent {border-left: 5px solid #111;}
-ol.commentlist li.thread-alt {}
-ol.commentlist li.thread-even {}
-ol.commentlist li.thread-odd {}
-
-
-/* Print styles!
--------------------------------------------------------------------------------*/
-@media print {
-
+.footer .col-4 a:hover {
+    opacity: 0.75;
 }
 
 
-/* Media queries!
--------------------------------------------------------------------------------*/
+/**========================================================
+    MEDIA QUERIES
+========================================================**/
 
-/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
-
+@media all and (max-width: 940px) {
+    .main-nav li { margin-left: 2em; }
+    .main-nav a { font-size: 0.875em; }
 }
 
-@media all and (orientation: portrait) {
-	
+@media all and (max-width: 940px) {
+    .main { padding: 1.5em 0; }
+/*     .menu-main-menu-container { display: none; } */
+    .main-nav { display: none; clear: both; width: 100%; padding: 0; margin-top: 1em; background: #e12526; }
+    .main-nav li { width: 50%; margin: 0; border-bottom: 1px solid #f09292; }
+    .main-nav li:nth-child(2n+1) { border-right: 1px solid #f09292; }
+    .main-nav a, .main-nav .current-menu-item a { display: block; padding: 0.5em 1em; color: #fff; font-size: 0.938em; }
+    .main-nav .current-menu-item a { border: none; }
+    .main-nav a:hover, .main-nav .current-menu-item a { background: #e43a3b; }
+    .btn-mobile { display: block; font-size: 1em; }
+    
+    .content, .sidebar-left { float: none; width: 100%; padding: 0; }
+    .sidebar-left { display: none; }
+    .home .sidebar-left { display: block; margin-bottom: 1.5em; }
+    .sidebar-left .widget-title { font-size: 1.25em; margin-bottom: 0.5em; }
+    .sidebar-left p { font-size: 0.875em; }
+    
+    .footer .col { width: 30.2%; margin-bottom: 1.5em; }
+    .footer .col-3 { margin-right: 0; }
+    .footer .col-4 { float: none; clear: both; width: 100%; min-height: 0; }
+    .footer .col-4 p:first-child { float: left; }
 }
 
-@media all and (orientation: landscape) {
-	
+@media all and (max-width: 600px) {
+    .wrapper { width: 92%; }
+    .logo { width: 100px; }
+    .btn-mobile { margin-top: 0.75em; }
+    
+    .sidebar-left:before { display: none; }
+    
+    .footer { background: #f5f5f5; border-top: 1px solid #e3e3e3; }
+    .footer .wrapper { border: none; }
+    .footer .col { float: none; width: 100%; margin-bottom: 1em; padding-bottom: 1em; border-right: none; border-bottom: 1px solid #e3e3e3; }
+    .footer .col-4 { border: none; }
+    .footer h4 { font-size: 1.25em; }
+    .footer li, .footer .col-3 p { font-size: 0.938em; line-height: 1.6em; }
 }
+
+
+

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php get_sidebar(); ?>
+
 <section class="content">
 
 	<?php
@@ -9,10 +11,13 @@
 	?>
 	<article class="post post-2 show">
 		<div class="top">
-	        <video id="home_video" class="video-js vjs-default-skin" controls width="640" height="360" poster="images/video.png" preload="auto" data-setup="{}"> <!-- autoplay -->
+<iframe width="853" height="480" src="//www.youtube.com/embed/dgAGudHcZr4?modestbranding=1&showinfo=0&controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+<!--
+	        <video id="home_video" class="video-js vjs-default-skin" controls width="640" height="360" poster="images/video.png" preload="auto" data-setup="{}">
 	          <source type="video/mp4" src="http://f41dc80ccbaca57d6867-4cc568d425a2f7cbbc4f3c192ab0c020.r72.cf2.rackcdn.com/ots.mp4">
 	          <source type="video/ogg" src="http://f41dc80ccbaca57d6867-4cc568d425a2f7cbbc4f3c192ab0c020.r72.cf2.rackcdn.com/ots.ogv">
 	        </video>
+-->
 		</div>
 		<div class="entry">
 			<?php echo $content_2; ?>
@@ -45,7 +50,5 @@
 	<?php endwhile; ?>
 		
 </section>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

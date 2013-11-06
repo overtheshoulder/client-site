@@ -58,7 +58,7 @@
 	} ?>
 
 	<!-- concatenate and minify for production -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/ss-social.css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fonts/iconfont.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/video-js.css" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
 	
@@ -105,7 +105,8 @@
         	<div class="logo">
         		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Over the Shoulder" /></a>
         	</div>
-			<nav class="main-nav" role="navigation">
+			<a href="" class="btn-mobile"><span class="icon-menu"></span><span class="icon-cancel"></span></a>
+			<nav class="main-nav cf" role="navigation">
 				<?php wp_nav_menu( array('menu' => 'primary') ); ?>
 			</nav>
 		</div>
