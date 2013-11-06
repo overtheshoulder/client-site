@@ -212,21 +212,23 @@ a:hover {
     FORMS
 ========================================================**/
 
-form, .form-item {
+.form-item {
 	position: relative;
+	margin-bottom: 1em;
 }
 
 label {
-	color: #5b5856;
+    display: block;
 	font-size: 0.813em;
 	font-weight: 600;
 }
 
-input[type="text"], textarea, select {
+input[type="text"], input[type="email"], textarea, select {
 	width: 100%;
-	padding: 0.75em 0.5em;
-	border: 1px solid #fff;
-	font: 500 0.813em/1.462em 'Open Sans', Arial, sans-serif;
+	max-width: 24em;
+	padding: 0.5em 0.75em;
+	border: 1px solid #888;
+	font: 500 0.938em/1.3em 'Lato', Arial, sans-serif;
 }
 
 input[type="text"]:focus, textarea:focus {
@@ -235,22 +237,40 @@ input[type="text"]:focus, textarea:focus {
 
 textarea {
 	display: block;
-	height: 8.125em;
+	max-width: 40em;
+	height: 10em;
 	resize: none;
 	overflow: hidden;
 }
 
 button, input[type="submit"] {
-	border: none;
-	background: none;
+    width: 4.5em;
+    height: 2.125em;
 	padding: 0;
-	font: 700 1em/1em 'Open Sans', Arial, sans-serif;
+	background: #E12526;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font: 700 1em/1em 'Lato', Arial, sans-serif;
 	-webkit-transition: all 0.15s ease-in-out;
 	-moz-transition: all 0.15s ease-in-out;
 	-ms-transition: all 0.15s ease-in-out;
 	-o-transition: all 0.15s ease-in-out;
 }
 
+/** Errors **/
+
+span.wpcf7-form-control-wrap {
+    display: inline;
+}
+
+span.wpcf7-not-valid-tip {
+    width: 14em !important;
+    top: 0 !important;
+    left: auto !important;
+    right: 0 !important;
+    text-align: center;
+}
 
 /**========================================================
     HEADER
