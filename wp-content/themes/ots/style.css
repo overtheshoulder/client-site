@@ -624,5 +624,6 @@ span.wpcf7-not-valid-tip {
     .footer li, .footer .col-3 p { font-size: 0.938em; line-height: 1.6em; }
 }
 
-
-
+@media all and (max-width: 520px) {
+    .main-nav li, .main-nav li:nth-child(2n+1) { float: none; width: 100%; border-right: inherit; }
+}
