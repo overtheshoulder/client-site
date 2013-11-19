@@ -23,32 +23,13 @@
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
-	<!--Google will often use this as its description of your page/site. Make it good.-->
-
 	<?php if (true == of_get_option('meta_author')) echo '<meta name="author" content="'.of_get_option("meta_author").'" />'; ?>
-	
 	<?php if (true == of_get_option('meta_google')) echo '<meta name="google-site-verification" content="'.of_get_option("meta_google").'" />'; ?>
-
-	<meta name="Copyright" content="Copyright &copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved.">
-
+	<meta name="Copyright" content="Copyright <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved.">
 	<?php if (true == of_get_option('meta_viewport')) {
 	echo '<meta name="viewport" content="'.of_get_option("meta_viewport").'" />';
-	echo '<!--  Mobile Viewport Fix
-	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
-	device-width : Occupy full width of the screen in its current orientation
-	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
-	-->';
 	} ?>
-	
-	<?php if (true == of_get_option('head_favicon')) {
-	echo '<link rel="shortcut icon" href="'.of_get_option("head_favicon").'" />';
-	echo '<!-- This is the traditional favicon.
-		 - size: 16x16 or 32x32
-		 - transparency is OK
-		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->';
-	} ?>
-
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
 	<?php if (true == of_get_option('head_apple_touch_icon')) {
 	echo '<link rel="apple-touch-icon" href="'.of_get_option("head_apple_touch_icon").'">';
 	echo '<!-- The is the icon for iOS Web Clip.
