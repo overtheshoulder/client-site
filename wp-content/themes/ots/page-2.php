@@ -11,7 +11,8 @@
 	?>
 	<article class="post post-2 show">
 		<div class="top">
-<iframe width="853" height="480" src="//www.youtube.com/embed/dgAGudHcZr4?modestbranding=1&showinfo=0&controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+		<iframe width="853" height="480" src="//www.youtube.com/embed/lL3oY993_kc?modestbranding=1&autoplay=1&showinfo=0&controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+<!-- 		<iframe width="853" height="480" src="//www.youtube.com/embed/dgAGudHcZr4?modestbranding=1&showinfo=0&controls=0&rel=0" frameborder="0" allowfullscreen></iframe> -->
 <!--
 	        <video id="home_video" class="video-js vjs-default-skin" controls width="640" height="360" poster="images/video.png" preload="auto" data-setup="{}">
 	          <source type="video/mp4" src="http://f41dc80ccbaca57d6867-4cc568d425a2f7cbbc4f3c192ab0c020.r72.cf2.rackcdn.com/ots.mp4">
